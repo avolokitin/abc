@@ -35,6 +35,6 @@ for index in range(1, length):
   new_profit = prices[index] - prices[min_index]
   if new_profit > current_profit:
     current_profit = new_profit
-return prcurrent_profit
+return current_profit
         
 print(MaxProfit)
