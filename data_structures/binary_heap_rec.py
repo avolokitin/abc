@@ -25,7 +25,7 @@ class MinHeap:
     
     if root != index:
       self.nodes[root] , self.nodes[index] = self.nodes[index], self.nodes[root]
-      self.PercDown(index)
+      self.PercDown(root)
 
   def PercUp(self, index):
 
@@ -67,5 +67,6 @@ print(heap)
 
 heapq.heapify(nums)
 heapq.heappop(nums)
+print(nums)
 heapq.heappush(nums, 1)
 print(nums)
