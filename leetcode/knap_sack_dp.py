@@ -28,7 +28,8 @@ def get_max_value(items, weights, max_weight):
   for row in range(1, rows):
     for col in range(1, cols):
       if col >= weights[row-1]:
-        dp[row][col] = items[row-1] + dp[row-1][col - weights[row-1]]
+        cur = items[row-1] + dp[row-1][col - weights[row-1]]
+        dp[row][col] = max(cur, dp[row-1][col])
       else:
         dp[row][col] = dp[row-1][col]
 
